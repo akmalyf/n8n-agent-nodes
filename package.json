@@ -1,0 +1,57 @@
+{
+  "name": "@n8n/n8n-nodes-ai-agent",
+  "version": "1.0.0",
+  "description": "n8n AI Agent nodes with AI SDK integration for OpenAI and Anthropic compatible APIs",
+  "keywords": [
+    "n8n-community-node-package",
+    "n8n",
+    "ai",
+    "agent",
+    "ai-sdk",
+    "openai",
+    "anthropic"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/your-username/n8n-nodes-ai-agent",
+  "author": {
+    "name": "Your Name",
+    "email": "your@email.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/your-username/n8n-nodes-ai-agent.git"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist"
+  },
+  "files": [
+    "dist"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/credentials/AiApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/AIAgent/AIAgent.node.js"
+    ]
+  },
+  "dependencies": {
+    "ai": "^4.0.0",
+    "@ai-sdk/openai": "^1.0.0",
+    "@ai-sdk/anthropic": "^1.0.0",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.6.0"
+  },
+  "peerDependencies": {
+    "n8n-core": "*",
+    "n8n-workflow": "*"
+  }
+}
